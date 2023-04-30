@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-04-30T17:07:16 IST" name="Default suite" finished-at="2023-04-30T17:08:11 IST" duration-ms="55133">
+    <groups>
+    </groups>
+    <test started-at="2023-04-30T17:07:16 IST" name="Default test" finished-at="2023-04-30T17:08:11 IST" duration-ms="55133">
+      <class name="ecommerece.ecomtest.PlaceOrderTest">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:ecommerece.ecomtest.PlaceOrderTest@3cebbb30]" started-at="2023-04-30T17:07:16 IST" name="beforeClass" finished-at="2023-04-30T17:07:18 IST" duration-ms="2731" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="initialize()[pri:0, instance:ecommerece.ecomtest.PlaceOrderTest@3cebbb30]" started-at="2023-04-30T17:07:18 IST" name="initialize" finished-at="2023-04-30T17:07:47 IST" duration-ms="28919" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="placeOrderValidation()[pri:0, instance:ecommerece.ecomtest.PlaceOrderTest@3cebbb30]" started-at="2023-04-30T17:07:47 IST" name="placeOrderValidation" finished-at="2023-04-30T17:08:10 IST" duration-ms="22728" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- placeOrderValidation -->
+        <test-method is-config="true" signature="tearClass()[pri:0, instance:ecommerece.ecomtest.PlaceOrderTest@3cebbb30]" started-at="2023-04-30T17:08:10 IST" name="tearClass" finished-at="2023-04-30T17:08:11 IST" duration-ms="711" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearClass -->
+      </class> <!-- ecommerece.ecomtest.PlaceOrderTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
