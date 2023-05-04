@@ -5,10 +5,10 @@ import org.openqa.selenium.By;
 import browsers.BrowserInstance;
 import testing.PageObject;
 
-public class DeleteItemPage extends PageObject
+public class DeleteItemCartPage extends PageObject
 {
 	BrowserInstance driver;
-public DeleteItemPage(BrowserInstance browser) 
+public DeleteItemCartPage(BrowserInstance browser) 
 {
 		super(browser);
 		driver=browser;

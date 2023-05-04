@@ -46,13 +46,15 @@ public class PlaceOrder extends PageObject
 			
 		} 
 		JavascriptExecutor js=driver.getJavaScriptEXecutor();
-	js.executeScript("window.scrollBy(0,600)");
+		js.executeScript("window.scrollBy(0,600)");
 		driver.click(placeorder);
-		return true;
+		driver.sleep(3000);
+		return driver.isElementDisplayed(msg) ;
 	}
 	By chkButton=By.xpath("//button[contains(text(),'Checkout')]");
 	By Country=By.xpath("//input[@placeholder='Select Country']");
 	By cName=By.xpath("//button/span[text()=' India']");
 	By cNameList=By.xpath("//button/span");
 	By placeorder=By.cssSelector("div .actions a");
+	By msg=By.xpath("//h1[contains(text(),'Thankyou')]");
 }

@@ -56,7 +56,7 @@ public class LoginPage extends PageObject
 		driver.sendKeys(email,emailValue);
 		driver.sendKeys(password,passwordValue);
 		driver.click(submitbutton);
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		return driver.isElementDisplayed(home_display);
 		
 		

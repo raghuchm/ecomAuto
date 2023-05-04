@@ -9,16 +9,16 @@ import org.testng.annotations.Test;
 
 import browsers.BrowserInstance;
 import pages.AddToCartPage;
-import pages.DeleteItemPage;
+import pages.DeleteItemCartPage;
 import pages.LoginPage;
 import testing.WebDriverTest;
 
-public class DeleteSelectedItemTest extends WebDriverTest
+public class DeleteItemCartTest extends WebDriverTest
 {
 	BrowserInstance driver;
 	LoginPage login_page;
 	AddToCartPage addToCart_page;
-	DeleteItemPage deleteItem;
+	DeleteItemCartPage deleteItem;
 	
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException
@@ -28,7 +28,7 @@ public class DeleteSelectedItemTest extends WebDriverTest
 		login_page.launchApplication();
 		login_page.login("veenavj.sauvg@gmail.com", "Sauvg@1143");
 		addToCart_page=new AddToCartPage(driver);
-		deleteItem=new DeleteItemPage(driver);
+		deleteItem=new DeleteItemCartPage(driver);
 		
 	}
 	@Test
