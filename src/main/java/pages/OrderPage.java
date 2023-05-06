@@ -58,13 +58,14 @@ public class OrderPage extends PageObject
 			{
 				count++;
 				btn_list.get(i).click();
+				names=driver.getListOfElements(allList);
+					// Its list of the delete button
+				btn_list=driver.getListOfElements(deleteButton);
+					// logic is to delete all the addidas orders from the list
+					
 				driver.waitForElementDisappear(toast_msg,5);
 				
-				if(count==names.size())
-				{
-					break;
-				}
-				driver.sleep(3000);
+				
 			}
 			
 			
@@ -76,7 +77,10 @@ public class OrderPage extends PageObject
 		
 		
 	}
-	
+	public void OrderPageButton()
+	{
+		driver.click(ordre_button);
+	}
 	
 		
 		

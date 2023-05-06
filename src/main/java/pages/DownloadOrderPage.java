@@ -33,7 +33,8 @@ public class DownloadOrderPage extends PageObject{
 		File f=driver.getDefaultDownloadDirectory();
 		System.out.println(f);
 		driver.sleep(3000);
-		File[] files = f.listFiles((dir1, name) -> name.startsWith("order") && name.endsWith(".xlsx"));
+		File[] files = f.listFiles((dir1, name)-> name.startsWith("order"));
+		
 		System.out.println(files.length);
 		
 		

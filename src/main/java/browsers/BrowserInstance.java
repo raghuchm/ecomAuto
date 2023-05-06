@@ -703,21 +703,28 @@ public abstract class BrowserInstance {
      *
      */
     
-     private boolean isElementDisplayed(By locator,boolean retry) throws NoSuchElementException
+     private boolean isElementDisplayed(By locator,boolean retry) 
      {
+    	 boolean found=false;
     	 try
     	 {
-    		return driver.findElement(locator).isDisplayed();
+    		 if(driver.findElement(locator).isDisplayed())
+    		 {
+    			 found=true;
+    		 }
+    		 //driver.findElement(locator).isDisplayed();
+    		
     		  
     	 }
-    	 catch(NoSuchElementException e)
+    	 catch(Exception e)
     	 {
     		 if(retry)
     		 {
     			 return isElementDisplayed(locator,false);
     		 }
-    		 else throw e;
+    		 //else throw e;
     	 }
+    	 return found;
      }
      /**
      *

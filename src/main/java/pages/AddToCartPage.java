@@ -9,7 +9,16 @@ import testing.PageObject;
 public class AddToCartPage extends PageObject
 {
 	BrowserInstance driver;
-	public AddToCartPage(BrowserInstance browser) {
+	 By productname=By.xpath("//div[h5[b[contains(text(),'adidas original')]]]//button[contains(text(),'Add')]");
+	 By msg=By.xpath("//h3[contains(text(),'adidas')]");
+	 By prod=By.cssSelector(".mb-3");
+	 By toast=By.cssSelector("#toast-container");
+	 By cartButton=By.xpath("//button[contains(text(),'Cart')]");
+	 String s="Zara,IPhone,Addidas";
+	 String []ss=s.split(",");
+	// System.out.println(ss);
+	public AddToCartPage(BrowserInstance browser) 
+	{
 		super(browser);
 		driver=browser;
 		// TODO Auto-generated constructor stub
@@ -47,9 +56,5 @@ public class AddToCartPage extends PageObject
 //		WebElement checkout;
 ////b[contains(text(),'adidas original')]
 	//div[h5[b[contains(text(),+cartName+)]]]//button[contains(text(),'Add')]
-	 By productname=By.xpath("//div[h5[b[contains(text(),'adidas original')]]]//button[contains(text(),'Add')]");
-	 By msg=By.xpath("//h3[contains(text(),'adidas')]");
-	 By prod=By.cssSelector(".mb-3");
-	 By toast=By.cssSelector("#toast-container");
-	 By cartButton=By.xpath("//button[contains(text(),'Cart')]");
+	
 }
