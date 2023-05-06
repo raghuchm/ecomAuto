@@ -1,8 +1,18 @@
 [
 {
-
+"first_name": "Prasad",
+"last_name": "chm",
+"email": "chmraghu@gmail.com",
+"mobile": "6363361684",
+"password": "Raghu@1143",
+"confirm_pwd":"Raghu@1143"
 },
 {
-
-},
+"first_name": "Prasad",
+"last_name": "chm",
+"email": "cmrymecraghu@gmail.com",
+"mobile": "6363361684",
+"password": "Raghu@1143",
+"confirm_pwd":"Raghu@1143"
+}
 ]

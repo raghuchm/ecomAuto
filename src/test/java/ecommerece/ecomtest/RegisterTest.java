@@ -25,7 +25,7 @@ public class RegisterTest extends WebDriverTest
 		reg=new RegisterPage(driver);
 	}
 	@Test
-	public void validateRegistration()
+	public void validateRegistration() throws IOException
 	{
 		
 		Assert.assertTrue(reg.fillRegistration()); 

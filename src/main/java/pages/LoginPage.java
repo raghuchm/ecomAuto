@@ -14,15 +14,16 @@ import utils.PropertyfileData;
 
 public class LoginPage extends PageObject
 {
-	//BrowserInstance driver;
+	BrowserInstance driver;
 	public LoginPage(BrowserInstance browser)
 	{
 		super(browser);
-		//driver=browser;
+		driver=browser;
 		// TODO Auto-generated constructor stub
 //		PageFactory.initElements(browser, this);
 	
 	}
+	
 
 	@Override
 	public boolean waitForLoaded()
@@ -56,6 +57,7 @@ public class LoginPage extends PageObject
 		driver.sendKeys(email,emailValue);
 		driver.sendKeys(password,passwordValue);
 		driver.click(submitbutton);
+		
 		Thread.sleep(5000);
 		return driver.isElementDisplayed(home_display);
 		

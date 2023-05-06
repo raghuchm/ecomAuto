@@ -21,7 +21,7 @@ public class LoginTest extends WebDriverTest
 	@BeforeClass
 	public void initialize() throws IOException
 	{
-		driver=browser.get();
+		driver=browser.get();// doubt
 		login_page= new LoginPage(driver);
 		login_page.launchApplication();
 		
