@@ -23,7 +23,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import io.cucumber.java.lu.a;
+//import io.cucumber.java.lu.a;
 
 import java.awt.Toolkit;
 import java.io.File;
@@ -31,6 +31,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.NoSuchElementException;
@@ -793,6 +794,7 @@ public abstract class BrowserInstance {
      public boolean waitForElementToHaveText(final By locator,final String expectedText, int timeout,boolean expected) 
      {
     	 WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(10));
+    	 
     	 try
     	 {
     		 if(expected)
@@ -1633,7 +1635,47 @@ catch(StaleElementReferenceException sere) {
 	}
    }
    
-}
+   
+   public boolean waitforvisibility(By findby)
+	{
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.visibilityOfElementLocated((findby)));
+		
+		return true;
+	}
+   
+//   public void switchtowindow()
+//   {
+//	    Set<String> Id= driver.getWindowHandles();
+//		Iterator<String> it=Id.iterator();
+//		String parentId=it.next();
+//		String childId=it.next();
+//		driver.switchTo().window(childId);
+//   }
+   
+   public void mouseover(By locator)
+   {
+	   
+	   Actions a= new Actions(driver);
+		//a.moveToElement(driver.findElement(By.xpath("//div[@class='exehdJ']"))).build().perform();
+		a.moveToElement(driver.findElement(locator)).build().perform();
+		
+	}
+   
+   public void clickElementWithCtrlKeyPressed(WebElement e,Keys keys)
+   {
+	   
+	   
+			Actions action=new Actions(driver);
+			action.keyDown(keys).click(e).keyUp(keys).perform();
+			
+			
+	   }
+	   
+   }
+   
+   
+
 
 
     

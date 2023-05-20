@@ -36,7 +36,7 @@ public class DeleteSelectedOrderTest extends WebDriverTest
 	@Test
 	public void deleteValidation() throws InterruptedException
 	{
-		del_order.deleteOrder("644f9949568c3e9fb1615391");
+		del_order.deleteOrder("6460f8f0568c3e9fb16be183");
 		
 	}
 }

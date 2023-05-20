@@ -49,16 +49,16 @@ private ScreenRecorder screenRecorder;
     }
 }
 
-@AfterClass(alwaysRun = true)
-    public synchronized void tearClass(){
-   try{
-       browser.get().shutdown();
-   }
-    finally {
-        browser.set(null);
-    }
+//@AfterClass(alwaysRun = true)
+//    public synchronized void tearClass(){
+//   try{
+//       browser.get().shutdown();
+//   }
+//    finally {
+//        browser.set(null);
+//    }
 
-}
+//}
 
     @Override
     public void beforeAlertAccept(WebDriver driver) {
