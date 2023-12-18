@@ -7,11 +7,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import browsers.BrowserInstance;
-import pages.AddToCartPage;
 import pages.DeleteSelectedOrder;
 import pages.LoginPage;
 import pages.OrderPage;
-import pages.PlaceOrder;
 import testing.WebDriverTest;
 
 public class DeleteSelectedOrderTest extends WebDriverTest
@@ -29,14 +27,14 @@ public class DeleteSelectedOrderTest extends WebDriverTest
 		login_page.launchApplication();
 		login_page.login("veenavj.sauvg@gmail.com", "Sauvg@1143");
 		order_page=new OrderPage(driver);
-		order_page.goToOrderPage();
+		//order_page.goToOrderPage();
 		del_order=new DeleteSelectedOrder(driver);
 		
 	}
 	@Test
 	public void deleteValidation() throws InterruptedException
 	{
-		del_order.deleteOrder("6460f8f0568c3e9fb16be183");
+		Assert.assertTrue( del_order.deleteOrder("646a2b8e568c3e9fb17223b8"));
 		
 	}
 }

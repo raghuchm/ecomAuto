@@ -13,12 +13,10 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.events.WebDriverEventListener;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -31,12 +29,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.NoSuchElementException;
 import java.util.Set;
-import java.util.stream.Collectors;
 import java.lang.Object;
 
 public abstract class BrowserInstance {
@@ -53,7 +49,7 @@ public abstract class BrowserInstance {
         maximize();
         mainWindowHandle=getWindowHandle();
     }
-    private String getWindowHandle() {
+    public String getWindowHandle() {
 		// TODO Auto-generated method stub
 		return driver.getWindowHandle();
 	}
@@ -243,7 +239,7 @@ public abstract class BrowserInstance {
      
      public JavascriptExecutor getJavaScriptEXecutor()
      {
-    	 return (JavascriptExecutor)driver;
+    	 return driver;
      }
      /**
       *the size of the browser will be set using dimension class and setsize method
@@ -518,7 +514,7 @@ public abstract class BrowserInstance {
      public boolean openNewTab(String url)
      {
 		Set<String> handles=getWindowHandles();
-    	 JavascriptExecutor js=(JavascriptExecutor)driver;
+    	 JavascriptExecutor js=driver;
     	 js.executeScript("window.open()");
     	 if(url != null)
     	 {
@@ -1514,6 +1510,7 @@ catch(StaleElementReferenceException sere) {
 	   Alert atr=driver.switchTo().alert();
 	   return atr;
 	   
+	   
    }
    
    protected Alert waitForAndGetAlertDialouge(int timeout)
@@ -1644,14 +1641,6 @@ catch(StaleElementReferenceException sere) {
 		return true;
 	}
    
-//   public void switchtowindow()
-//   {
-//	    Set<String> Id= driver.getWindowHandles();
-//		Iterator<String> it=Id.iterator();
-//		String parentId=it.next();
-//		String childId=it.next();
-//		driver.switchTo().window(childId);
-//   }
    
    public void mouseover(By locator)
    {
@@ -1671,6 +1660,16 @@ catch(StaleElementReferenceException sere) {
 			
 			
 	   }
+   
+   public void readJsonData()
+   {
+	   try {
+		String jsoncontent=FileUtils.readFileToString(new File("E://selenium_workspace//ecomAuto//src//test//java//resources//data.json"));
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+   }
 	   
    }
    

@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import testing.PageObject;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class SortPage extends PageObject {
     /**

@@ -1,8 +1,6 @@
 package com.eclectic.interview.filter;
 
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -13,7 +11,7 @@ public class TestCount {
         char[] arr=test.toCharArray();
         List<char[]> listVal = Arrays.asList(arr);
         printList(listVal);
-        List testList = (List) listVal.stream().distinct().collect(Collectors.toList());
+        List testList = listVal.stream().distinct().collect(Collectors.toList());
         printList1(testList);
 
 //        HashSet hashSet=new HashSet();

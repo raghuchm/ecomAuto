@@ -1,25 +1,24 @@
 package pages;
 
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-
 import browsers.BrowserInstance;
 import testing.PageObject;
 
 public class OpenNewTab extends PageObject
 {
 
-	public OpenNewTab(BrowserInstance browser) {
+	public OpenNewTab(BrowserInstance browser)
+	{
 		super(browser);
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
-	public boolean waitForLoaded() {
+	public boolean waitForLoaded()
+	{
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -43,9 +42,10 @@ public class OpenNewTab extends PageObject
 		driver.mouseover(more);
 		list= driver.getListOfElements(options);
 		
-	
 	}
+}
+	 
 
-		
-
-}}
+	 
+	 
+}

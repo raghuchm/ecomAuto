@@ -7,10 +7,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import browsers.BrowserInstance;
-import pages.AddToCartPage;
 import pages.LoginPage;
 import pages.OrderPage;
-import pages.PlaceOrder;
 import testing.WebDriverTest;
 
 public class OrderPageTest extends WebDriverTest

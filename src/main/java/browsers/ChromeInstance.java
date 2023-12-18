@@ -1,8 +1,8 @@
 package browsers;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import io.github.bonigarcia.wdm.config.DriverManagerType;
 import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
-import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -11,7 +11,6 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.net.URL;
-import java.rmi.Remote;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,7 +27,7 @@ public class ChromeInstance extends BrowserInstance{
     @Override
 
     protected void configureDriver() {
-        ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
+        WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
         System.setProperty(ChromeDriverService.CHROME_DRIVER_APPEND_LOG_PROPERTY,"true");
         driver=new EventFiringWebDriver(new ChromeDriver(getDefaultOptions()));
     }

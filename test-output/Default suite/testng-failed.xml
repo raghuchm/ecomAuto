@@ -3,14 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ecommerece.ecomtest.OrderPageTest">
+      <class name="ecommerece.ecomtest.LoginTest">
         <methods>
           <include name="tearClass"/>
-          <include name="beforeClass"/>
-          <include name="validateOrderPage"/>
           <include name="initialize"/>
+          <include name="invalidUname"/>
+          <include name="beforeClass"/>
+          <include name="invalidPassword"/>
+          <include name="invalidUnPaswrd"/>
+          <include name="loginValidation"/>
         </methods>
-      </class> <!-- ecommerece.ecomtest.OrderPageTest -->
+      </class> <!-- ecommerece.ecomtest.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

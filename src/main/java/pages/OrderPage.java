@@ -9,7 +9,6 @@ import org.openqa.selenium.WebElement;
 
 import browsers.BrowserInstance;
 import testing.PageObject;
-import utils.PropertyfileData;
 
 public class OrderPage extends PageObject
 {
@@ -49,28 +48,21 @@ public class OrderPage extends PageObject
 		// Its list of the delete button
 		List<WebElement> btn_list=driver.getListOfElements(deleteButton);
 		// logic is to delete all the addidas orders from the list
-		for(int i=0;i<=names.size();i++)
+		for(int i=0;i<names.size();i++)
 		{
 			
 			String c=names.get(i).getText();
 			System.out.println(c);
 			if(c.equalsIgnoreCase("adidas original"))
 			{
-				count++;
+				
 				btn_list.get(i).click();
 				driver.waitForElementDisappear(toast_msg,5);
-				
-				if(count==names.size())
-				{
-					break;
-				}
-				driver.sleep(3000);
 			}
 			
-			
+			names=driver.getListOfElements(allList);
+			btn_list=driver.getListOfElements(deleteButton);
 		}
-		
-		System.out.println(count);
 		
 		return driver.isElementDisplayed(msg);
 		
@@ -78,8 +70,6 @@ public class OrderPage extends PageObject
 	}
 	
 	
-		
-		
 	}
 	
 

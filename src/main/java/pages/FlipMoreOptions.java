@@ -1,10 +1,8 @@
 package pages;
 
-import java.util.Arrays;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 import browsers.BrowserInstance;
@@ -12,10 +10,6 @@ import testing.PageObject;
 
 public class FlipMoreOptions  extends PageObject
 {
-
-	private static final Keys CONTROL = null;
-
-
 
 	public FlipMoreOptions(BrowserInstance browser) {
 		super(browser);
@@ -30,8 +24,8 @@ public class FlipMoreOptions  extends PageObject
 	By more=By.xpath("//div[@class='exehdJ']");
 	By options=By.xpath("//div/ul/li");
 	By close=By.xpath("//button[@class='_2KpZ6l _2doB4z']");
-	Keys k = Keys.CONTROL;
-	WebElement name;
+	//Keys k = Keys.CONTROL;
+	//WebElement name;
 	
 	
 	

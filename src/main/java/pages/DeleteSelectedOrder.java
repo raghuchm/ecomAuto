@@ -23,8 +23,12 @@ public class DeleteSelectedOrder extends PageObject {
 
 	By row=By.xpath("//tbody/tr");
 	By deleteButton=By.xpath("//tbody/tr/td[6]/button");
-	public void deleteOrder(String name)
+	By ordre_button= By.xpath("//button[contains(text(),'ORDERS')]");
+	
+	
+	public boolean deleteOrder(String name)
 	{
+		driver.click(ordre_button);
 		List<WebElement> allRows=driver.getListOfElements(row);
 		for (int i=0;i<allRows.size();i++)
 		{
@@ -34,8 +38,19 @@ public class DeleteSelectedOrder extends PageObject {
 				driver.click(deleteButton);
 				break;
 			}
+			
 		}
-		
+		allRows=driver.getListOfElements(row);
+		for (int i=0;i<allRows.size();i++)
+		{
+			String s=allRows.get(i).getText();	
+			if(s.equals(name))
+			{
+				return false;
+			}
+			
+		}
+		return true;
 		
 	}
 }

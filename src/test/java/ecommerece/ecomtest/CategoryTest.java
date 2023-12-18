@@ -3,14 +3,12 @@ package ecommerece.ecomtest;
 import java.io.IOException;
 
 import org.junit.Assert;
-import org.junit.experimental.categories.Categories;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import browsers.BrowserInstance;
 import pages.CatPage;
 import pages.LoginPage;
-import pages.Logout;
 import testing.WebDriverTest;
 
 public class CategoryTest extends WebDriverTest

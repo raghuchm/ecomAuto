@@ -3,7 +3,6 @@ package ecommerece.ecomtest;
 import java.io.IOException;
 
 import org.junit.Assert;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
